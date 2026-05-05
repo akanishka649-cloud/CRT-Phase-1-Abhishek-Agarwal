@@ -51,7 +51,7 @@ int main(){
 
 
 //Program 4
-//Print right angled  rectangle
+//Print right angled  triangle
 #include<iostream>
 using namespace std;
 int main(){
