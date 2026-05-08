@@ -1,0 +1,201 @@
+// problem --1 
+// Types of Inheritance 
+//1.3 -- Single Inheritance
+
+#include <iostream>
+using namespace std;
+
+class Vehicle {
+    public:
+    void start() {
+        cout<<"Vehicle starts"<<"\n";
+    }
+};
+
+class Car : public Vehicle {
+    public:
+    void drive() {
+        cout<<"Car is running"<<"\n";
+    }
+};
+
+int main() {
+  Car obj1;
+  obj1.drive();
+  obj1.start();
+}
+
+
+
+
+
+// problem --2
+// Types of Inheritance 
+//1.2 -- Multi-level Inheritance
+
+#include <iostream>
+using namespace std;
+
+class Vehicle {
+    public:
+    void start() {
+        cout<<"Vehicle starts"<<"\n";
+    }
+};
+
+class Car : public Vehicle {
+    public:
+    void drive() {
+        cout<<"Car is running"<<"\n";
+    }
+};
+
+class speedOMeter : public Car {
+    public :
+    void speed() {
+        cout<<"Car is running at 60km/h"<<"\n";
+    }
+};
+
+int main() {
+  speedOMeter obj1;
+  obj1.start();
+  obj1.drive();
+  obj1.speed();
+}
+
+
+
+
+
+
+//Program 3
+//Types of inhertitance 
+//1.3-- Hierarchical Inhertitance
+#include<iostream>
+using namespace std;
+class Vehical{
+public:    
+    void start(){
+        cout<<"Vehical starts...."<<"\n";
+    }
+};
+class Bike: public Vehical{
+public:
+   void drive(){
+       cout<<"BIKE is running"<<"\n";
+   }
+};
+class Car: public Vehical{
+public:
+     void drive(){
+         cout<<"CAR is running "<<"\n";
+     }
+};
+int main(){
+   Car c;
+   Bike b;
+   c.start();
+   c.drive();
+}
+
+
+
+
+
+
+//Program 5
+//Types of inhertitance 
+//1.5-- Hybrid Inhertitance
+//Virtual base class
+//Diamond problem solution
+#include<iostream>
+using namespace std;
+class A{
+public:    
+    void print(){
+       cout<<"hii there";
+       }
+};
+
+class B: virtual public A {
+//NO LOGIC
+};
+class C: virtual public A{
+    //NO LOGIC
+};
+class D: public B ,public C{
+    //NO LOGIC
+};
+int main(){
+D obj1;
+obj1.print();
+}
+
+
+
+
+
+
+
+
+
+
+
+//Program 4
+//Types of inhertitance 
+//1.4-- Multiple Inhertitance
+#include<iostream>
+using namespace std;
+class Parent1{
+public:    
+    void paiseDoMummmy(){
+       cout<<"mummy paise de do ghumne jna h";
+       }
+};
+
+class Parent2 {
+public:
+   void paiseDoPapa{
+      cout<<"paise de do papa books laani h";
+      }
+};
+class child: public Parent1, public Parent2{
+    //NO LOGIC
+};
+int main(){
+   child c;
+   c.paiseDo();
+}
+
+
+
+
+
+//Program 6
+//Encapsulation
+#include<iostream>
+using namespace std;
+class BankAccount{
+private:
+    int bankBalance;
+public:    
+    void setBalance(int amount){
+        if(amount>=0){
+            bankBalance= amount;
+        }else{
+            cout<<"enter a valid amount...";
+        }
+        
+    }
+  int getbalance(){
+       return bankBalance; 
+    }
+};
+int main(){
+    BankAccount obj1;
+    obj1.setBalance(5000);
+    cout<<obj1.getbalance();
+}
+  
+  
