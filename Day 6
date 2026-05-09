@@ -1,0 +1,180 @@
+//Problem--1
+//Using Function
+
+ #include<iostream>
+ using namespace std;
+
+ int coffeePrice(int ruppees) {
+     return ruppees*5;
+ }
+
+ int main() {
+     cout << coffeePrice(30);
+     return 0;
+}
+
+
+
+
+
+
+// Program--2 
+//Store discount application 
+ #include<iostream>
+ using namespace std;
+
+ int discountedAmount(int bill) {
+     return bill-(bill*10/100);
+ }
+
+ int main() {
+     cout << discountedAmount(1000);
+     return 0;
+ }
+
+
+
+
+
+
+
+
+// Program--3 
+//Smart ac remote
+//FUNCTION OVERLOADING
+//1. Turn on ac -- 22`C
+//2. Input -- 20.5 -- Temperature set -- 20.5`C
+//3. Input -- Eco -- Temperature set -- 24`C
+//4. Input -- Turbo -- Temperature set -- 18`C
+
+#include<iostream>
+using namespace std;
+
+void setTemperature() {
+    cout << "Temperature set to 22`C" << "\n";
+}
+
+void setTemperature(double temp) {
+    cout << "Temperature Set to" << temp << "`C" << "\n";
+}
+
+void setTemperature(string mode) {
+    if(mode == "Eco") {
+        cout << "Temperature set to 24`C" << "\n";
+    } else if(mode == "Turbo") {
+        cout << "Temperature set to 18`C" << "\n";
+    }
+}
+
+int main() {
+    setTemperature();
+     setTemperature(20.5);
+     setTemperature("Eco");
+}
+
+
+
+
+
+
+
+//Program--4
+//Pointers-- declaration, initaialization, airthmetic operation
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    
+    int a=10;
+    int *ptr1 = &a;
+    int b=20;
+    int *ptr2 = &b;
+    int c = *ptr1 + *ptr2;
+    
+    cout << c;
+}
+
+
+
+
+
+
+//Program--5 
+//Swapping of two numbers pointers and functions
+
+#include<iostream>
+using namespace std;
+
+void swapNumber(int *ptr1 , int *ptr2) {
+    int temp=*ptr1;
+     *ptr1=*ptr2; 
+    *ptr2=temp;
+}
+
+int main() {
+    int a, b;
+    cin >> a;
+    cin >> b;
+    swapNumber(&a, &b);
+    cout << a << " " << b;
+}
+
+
+
+
+
+
+
+//Program--6 
+//CLASSES AND OBJECT
+
+#include<iostream>
+using namespace std;
+
+class Student{
+ 
+ public:   
+    string name;
+    int age;
+    
+    void introduce() {
+        cout << "Hi there, this person name is " << name << " and her age is " << age << "\n";
+    }
+};
+
+int main() {
+    Student s1, s2;
+    s1.name = "Arushi";
+    s1.age = 20;
+    s2.name = "Tanisha";
+    s2.age = 20;
+    
+    s1.introduce();
+    s2.introduce();
+}
+
+
+
+
+
+    
+
+//Program--7
+//Access Specifier--pubic, private, protected
+
+#include<iostream>
+using namespace std;
+
+// 7.1 - public
+
+class publicPark{
+    public:
+    void enter() {
+        cout << "Anyone can enter in the park...";
+    }
+};
+int main() {
+    publicPark p;
+    p.enter();
+}
