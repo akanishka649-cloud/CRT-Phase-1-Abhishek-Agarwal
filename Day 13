@@ -17,3 +17,62 @@ public:
         stairsClimb();
     }
 };
+
+
+
+
+
+//Program 2
+// Recursion -- Fibonacii series
+//Possible Combination of Binary Numbers
+#include <iostream>
+using namespace std;
+
+ int chance(int n) {
+     // base condition
+     if(n==0) {
+         return 1;
+     }
+     if(n==1) {
+         return 2;
+     }
+     //logic
+     return chance(n-1)+chance(n-2);
+ }
+int main() {
+    cout<<chance(3);
+}
+
+
+
+
+
+
+
+//Program 3
+// Recursion -- Fibonacii series
+//Possible Combination of n number of columns....
+#include <iostream>
+using namespace std;
+
+ int combo(int n) {
+     // base condition
+     if(n<4) {
+         return 1;
+     }
+     //logic
+     return combo(n-4)+combo(n-1);
+ }
+int main() {
+    cout<<combo(5);
+}
+
+
+
+
+
+
+
+
+
+
