@@ -1,0 +1,19 @@
+//Program 1
+//LeetCode 70
+class Solution {
+public:
+   int stairsclimb(int n) {
+        //BASE CONDITION
+        if(n==0||n==1){
+            return 1;
+        }
+        if(n==2){
+            return 2;
+        }
+        //LOGIC
+        return starisClimb(n-1)+stairsClimb(n-2);  
+    }
+    int climbStairs(int n){
+        stairsClimb();
+    }
+};
